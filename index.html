@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>countdown</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
+
+</head>
+<body>
+
+	<div class="fondspan">
+		<div class="spanc">
+
+			<span id="minutes">00 </span><span> : </span><span id="secondes">  00</span>
+
+		</div>
+	</div>
+
+
+	<div class="inputB">
+		<div class="ui action input">
+			<input id="inputM" type="text" placeholder="minutes">
+			<button id="bMinutes" class="ui inverted violet icon button">
+				<i class="add circle icon"></i>
+			</button>
+			<input id="inputS" type="text" placeholder="secondes">
+			<button id="bSecondes" class="ui inverted violet icon button">
+				<i class="add circle icon"></i>
+			</button>
+		</div>
+	</div>
+
+
+	<div class="buttonc">
+
+		<button id ="play" class="ui inverted violet button"><i class="video play outline icon"></i></button>
+		<button id ="pause" class="ui inverted violet button"><i class="pause circle outline icon"></i></button>
+		<button id ="reset" class="ui inverted violet button"><i class="stop circle outline icon"></i></button>
+
+	</div>
+
+
+
+
+
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="app.js"></script>	
+</body>
+</html>
