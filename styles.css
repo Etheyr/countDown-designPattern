@@ -1,8 +1,55 @@
-body {
-	background-color: grey;
-}
+
 .spanc {
-	font-size: 150px;
-	text-align: center;
-	margin-top: 100px;
+	font-size: 400px;
+	margin-left: 10%;
+	margin-top: 300px;
+	position: absolute;
+	top:0;
 }
+span{
+	font-color:blue;
+
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+.fondspan{
+
+	background-image:url(https://unsplash.it/1920/1080?image=985);
+	background-image: no-repeat;
+	height:772px;
+
+}
+.inputM {
+	width: 100px;
+}
+.under {
+	background-color: #282c37;
+	height:40px;
+
+
+}
+.buttonc {
+	margin-top: -60px;
+	margin-left: 40px;
+
+}
+button {
+	width: 100px;
+	height: 60px;
+}
+
+.inputB {
+	margin-left: 64%;
+	margin-top: -60px;
+}
+#progress {
+	width: 100%;
+	height: 100%;
+
+}
+#chargement {
+	width: 100%;
+}
+
