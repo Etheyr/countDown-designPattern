@@ -11,9 +11,14 @@ html{
 	width: 100%;
 	height: 100%;
 }
+span {
+	color: #282c37;
+	opacity: 0.6;
+
+}
 .fondspan{
 
-	background-image:url(https://unsplash.it/1920/1080?image=985);
+	background-image:url(https://unsplash.it/1920/1080?image=1067);
 	background-image: no-repeat;
 	height:770px;
 }
@@ -27,16 +32,17 @@ html{
 }
 .buttonc {
 	margin-top: -60px;
-	margin-left: 40px;
+	margin-left: 5px;
 
 }
 button {
 	width: 100px;
 	height: 60px;
+border-bottom: 50%;
 }
 
 .inputB {
-	margin-left: 42%;
+	margin-left: 44%;
 	margin-top: -60px;
 }
 .ui.blue.progress.active {

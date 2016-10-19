@@ -48,6 +48,7 @@
 				$('.fondspan').html('<iframe width="1280" height="720" src="https://www.youtube.com/embed/OWFBqiUgspg?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
 				$('.spanc').hide();
 				$('.buttonc').hide();
+				$('.inputB').hide();
 				clearInterval(this.interval);
 			}
 
@@ -64,8 +65,10 @@
 		},
 		recupInput: function(){
 
-			var recupM = $('#inputM').val();
-			var recupS = $('#inputS').val();
+			this.timerMin = $("#min").val() || 0;
+			this.timerSec = $("#sec").val() || this.timerDefault;
+			this.timer = parseInt(this.timerMin, 10)*60 + parseInt(this.timerSec, 10);
+			this.timerMax = this.tim
 		},
 		progressBar: function(){
 			var progress = parseInt(this.time*100/this.defaultTime,10);
