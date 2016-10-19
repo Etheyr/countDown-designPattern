@@ -19,8 +19,9 @@
 			$('#play').on('click', this.play.bind(this));
 			$('#pause').on('click', this.pause.bind(this));
 			$('#reset').on('click', this.reset.bind(this));
-			$('#bMinutes').on('click', this.recupM);
-			$('#bSecondes').on('click',this.recupS);
+			$('#bHeure').on('click', this.inputH.bind(this));
+			$('#bMinutes').on('click', this.recupM.bind(this));
+			$('#bSecondes').on('click',this.recupS.bind(this));
 		},
 
 		play: function(){
@@ -56,6 +57,7 @@
 			var heure=parseInt(this.time/3600%60,10 );
 			var minute= parseInt(this.time%3600/60,10);
 			var seconde= this.time % 60;
+			var milliseconde= parseInt(this.time%100,10);
 			$('#heure').html(this.addZero(heure));
 			$('#minutes').html(this.addZero(minute));
 			$('#secondes').html(this.addZero(seconde));
