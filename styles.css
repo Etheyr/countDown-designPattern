@@ -1,13 +1,10 @@
 
 .spanc {
-	font-size: 400px;
+	font-size: 250px;
 	margin-left: 10%;
 	margin-top: 300px;
 	position: absolute;
 	top:0;
-}
-span{
-	font-color:blue;
 
 }
 html{
@@ -26,8 +23,7 @@ html{
 }
 .under {
 	background-color: #282c37;
-	height:40px;
-
+	height:50px;
 
 }
 .buttonc {
@@ -41,12 +37,12 @@ button {
 }
 
 .inputB {
-	margin-left: 64%;
+	margin-left: 42%;
 	margin-top: -60px;
 }
-#progress {
-	width: 100%;
-	height: 100%;
+.ui.blue.progress.active {
+	margin:0 auto;
+	margin-top: 1px;
 
 }
 #chargement {

@@ -5,8 +5,8 @@
 	var countdown = {
 
 		isPause : false,
-		time : 300,
-		defaultTime : 300,
+		time : 3800,
+		defaultTime : 3800,
 		interval : null,
 
 		init: function(){
@@ -37,26 +37,30 @@
 
 			if(this.reset) {
 				clearInterval(this.time);
-				this.time = 300;
+				this.time =10;
 			}
 		},
 		decrement:function(){
 
-			this.progressBar();
 			this.time--;
+			this.progressBar();
 			this.updateView();
 
 			if(this.time === 0){
-				clearInterval(this.interval.bind(this));
+				clearInterval(this.interval);
 			}
 
 		},
 		updateView: function(){
 
-			var minute= parseInt(this.time/60,10)
+			var heure=parseInt(this.time/3600%60,10 );
+			var minute= parseInt(this.time%3600/60,10);
 			var seconde= this.time % 60;
-			$('#minutes').html(minute);
-			$('#secondes').html(seconde);
+			$('#heure').html(this.addZero(heure));
+			$('#minutes').html(this.addZero(minute));
+			$('#secondes').html(this.addZero(seconde));
+			$('.url.example .ui.embed').embed();
+
 
 		},
 		recupInput: function(){
@@ -67,7 +71,13 @@
 		progressBar: function(){
 			var progress = parseInt(this.time*100/this.defaultTime,10);
 			$('#chargement').css('width',progress+'%');
-			console.log(progress);
+			$('#progress').text(progress + '%');
+		},
+		addZero: function(nombre){
+			if(nombre<10){
+				nombre = '0'+nombre;
+			}
+			return nombre
 		}
 	};
 	countdown.init();

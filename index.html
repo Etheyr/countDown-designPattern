@@ -8,12 +8,12 @@
 
 </head>
 <body>
-
+	
 	<div class="fondspan">
 	</div>
 
 	<div class="spanc">
-		<span id="minutes">00 </span><span> : </span><span id="secondes">  00</span>
+		<span id="heure">00 </span><span> : </span><span id="minutes">00 </span><span> : </span><span id="secondes">  00</span>
 	</div>
 
 
@@ -26,11 +26,15 @@
 
 	<div class="inputB">
 		<div class="ui action input">
-			<input id="inputM" type="text" placeholder="minutes">
+			<input id="inputH" type="text" placeholder="Hours">
+			<button id="bHeure" class="ui blue icon button">
+				<i class="add circle icon"></i>
+			</button>
+			<input id="inputM" type="text" placeholder="Minutes">
 			<button id="bMinutes" class="ui blue icon button">
 				<i class="add circle icon"></i>
 			</button>
-			<input id="inputS" type="text" placeholder="secondes">
+			<input id="inputS" type="text" placeholder="Secondes">
 			<button id="bSecondes" class="ui blue icon button">
 				<i class="add circle icon"></i>
 			</button>
@@ -38,14 +42,16 @@
 	</div>
 
 	<div class="under">
-		<div class="ui inverted blue progress" id="progress">
+		<div class="ui blue progress active">
 			<div class="bar" id="chargement">
-				<div class="progress"></div>
+				<div class="progress" id="progress">100%</div>
 			</div>
 		</div>
 	</div>
 
+
 	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="app.js"></script>	
+
 </body>
 </html>
