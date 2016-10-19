@@ -5,12 +5,13 @@
 	var countdown = {
 
 		isPause : false,
-		time : 3800,
-		defaultTime : 3800,
+		time : 10,
+		defaultTime : 10,
 		interval : null,
 
 		init: function(){
 
+			$('iframe').hide();
 			this.listeners();
 
 		},
@@ -19,9 +20,6 @@
 			$('#play').on('click', this.play.bind(this));
 			$('#pause').on('click', this.pause.bind(this));
 			$('#reset').on('click', this.reset.bind(this));
-			$('#bHeure').on('click', this.inputH.bind(this));
-			$('#bMinutes').on('click', this.recupM.bind(this));
-			$('#bSecondes').on('click',this.recupS.bind(this));
 		},
 
 		play: function(){
@@ -38,7 +36,7 @@
 
 			if(this.reset) {
 				clearInterval(this.time);
-				this.time =10;
+				this.time =5401;
 			}
 		},
 		decrement:function(){
@@ -46,8 +44,10 @@
 			this.time--;
 			this.progressBar();
 			this.updateView();
-
 			if(this.time === 0){
+				$('.fondspan').html('<iframe width="1280" height="720" src="https://www.youtube.com/embed/OWFBqiUgspg?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				$('.spanc').hide();
+				$('.buttonc').hide();
 				clearInterval(this.interval);
 			}
 
@@ -61,9 +61,6 @@
 			$('#heure').html(this.addZero(heure));
 			$('#minutes').html(this.addZero(minute));
 			$('#secondes').html(this.addZero(seconde));
-			$('.url.example .ui.embed').embed();
-
-
 		},
 		recupInput: function(){
 

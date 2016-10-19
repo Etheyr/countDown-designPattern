@@ -15,7 +15,7 @@ html{
 
 	background-image:url(https://unsplash.it/1920/1080?image=985);
 	background-image: no-repeat;
-	height:772px;
+	height:770px;
 }
 .inputM {
 	width: 100px;
@@ -41,10 +41,12 @@ button {
 }
 .ui.blue.progress.active {
 	margin:0 auto;
-	margin-top: 1px;
 
 }
 #chargement {
 	width: 100%;
 }
-
+iframe{
+	width:100%;
+	height: 100%;
+}
